@@ -7,5 +7,8 @@ namespace studentApi.Controllers
     public class StudentsController : ControllerBase
     {
         private static List<Student> students = new List<Student>();
+
+        [HttpGet]
+        public ActionResult<List<Student>> GetStudents() => Ok(students);
     }
 }
