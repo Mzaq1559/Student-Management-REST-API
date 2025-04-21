@@ -10,5 +10,12 @@ namespace studentApi.Controllers
 
         [HttpGet]
         public ActionResult<List<Student>> GetStudents() => Ok(students);
+
+        [HttpGet("{id}")]
+        public ActionResult<Student> GetStudent(int id)
+        {
+            var student = students.FirstOrDefault(s => s.Id == id);
+            return student is null ? NotFound() : Ok(student);
+        }
     }
 }
