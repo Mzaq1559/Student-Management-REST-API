@@ -17,5 +17,12 @@ namespace studentApi.Controllers
             var student = students.FirstOrDefault(s => s.Id == id);
             return student is null ? NotFound() : Ok(student);
         }
+
+        [HttpPost]
+        public ActionResult<Student> AddStudent(Student student)
+        {
+            students.Add(student);
+            return CreatedAtAction(nameof(GetStudent), new { id = student.Id }, student);
+        }
     }
 }
