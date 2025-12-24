@@ -34,6 +34,21 @@ This project demonstrates the use of modern ASP.NET Core practices, Swagger/Open
 
 ---
 
+## Project Structure
+Student-Management-REST-API/
+│
+├─ bin/ # Compiled binaries (auto-generated)
+├─ obj/ # Temporary object files (auto-generated)
+├─ Properties/ # LaunchSettings and project properties
+├─ Controllers/ # API controllers (StudentController, etc.)
+├─ Models/ # Data models (Student, etc.)
+├─ appsettings.json # App configuration
+├─ Program.cs # Main app entry point
+├─ studentApi.csproj # Project file
+└─ README.md # Project documentation
+
+---
+
 ## 📌 Getting Started
 
 1. **Clone the repository**
